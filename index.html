@@ -1,0 +1,29 @@
+<!doctype HTML>
+<html>
+<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+<script src="aframe-ar.js"> </script>
+<body style='margin : 0px; overflow: hidden;'>
+<a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;'>
+
+    <a-assets>
+        <!-- <a-asset-item id="why-male-models" src="man.glb"></a-asset-item> -->
+        <img id="notice" src="notice.png">
+        <!--
+        <img id="goggles" src="goggles.png">
+        <img id="price" src="price.png">
+        <img id="shadow2" src="../../assets/img/radial-shadow-2.png">
+        <img id="shoes" src="shoes.png"> 
+        -->
+      </a-assets>
+
+    <a-marker preset='custom' url='pattern.patt'>
+        <!-- <a-box position='0 0.5 0' material='color: green;opacity: 0.5' material.src=""></a-box> -->
+        <a-image src="#notice" rotation="-90 0 0" scale="0.5 0.5 0.5"></a-image>
+    </a-marker>
+    <a-marker preset='hiro'>
+        <a-box position='0 0.5 0' material='color: red;opacity: 0.5'></a-box>
+    </a-marker>
+    <a-entity camera></a-entity>
+</a-scene>
+</body>
+</html>
